@@ -1,5 +1,5 @@
 const path = require("path");
-const { Client, Server } = require(path.join());
+const { Client, Server } = require("node-osc");
 const midi = require("midi");
 var oscServer = new Server(8010, "0.0.0.0", () => {
   console.log("OSC Server is listening");
