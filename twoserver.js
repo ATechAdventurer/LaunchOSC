@@ -23,8 +23,9 @@ input.getPortCount();
 // Get the name of a specified input port.
 input.getPortName(0);
 input.on("message", (deltaTime, message) => {
-  clients.forEach((client) => {
+  clients.forEach((client, index) => {
     client.send(`/${message[1]}`, message[2]);
+    console.log("Writing", message[2], "to", index);
   });
 });
 
